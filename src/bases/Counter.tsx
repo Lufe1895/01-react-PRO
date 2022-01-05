@@ -1,10 +1,10 @@
 import { useState } from "react"
 
 interface Props {
-    initialValue:number
+    initialValue?:number
 }
 
-export const Counter = ({ initialValue }:Props) => {
+export const Counter = ({ initialValue = 0 }:Props) => {
     const [counter, setCounter] = useState<number>(initialValue);
 
     const handleIncrement = () => {
